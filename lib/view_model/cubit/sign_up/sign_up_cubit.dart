@@ -69,7 +69,7 @@ class SignUpCubit extends Cubit<SignUpState> {
       debugPrint(value.data);
       emit(SignUpSuccessState());
     }).catchError((onError) {
-      debugPrint(onError.response);
+      debugPrint(onError.response.toString());
       emit(SignUpFailState());
     });
   }

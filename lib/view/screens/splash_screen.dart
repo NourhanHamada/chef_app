@@ -1,8 +1,10 @@
 import 'package:chef_app/view/constants/colors.dart';
 import 'package:chef_app/view/constants/extentions.dart';
-import 'package:chef_app/view/screens/choose_lang_screen.dart';
 import 'package:flutter/material.dart';
+import '../../generated/l10n.dart';
 import '../constants/assets.dart';
+import '../core/custom_text.dart';
+import 'choose_lang_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -33,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
-              onTap: (){
+              onTap: () {
                 setState(() {
                   isAnimate = true;
                 });
@@ -52,16 +54,14 @@ class _SplashScreenState extends State<SplashScreen> {
                     curve: Curves.fastOutSlowIn,
                     bottom: isAnimate ? 30 : 0,
                     duration: const Duration(seconds: 3),
-                    onEnd: (){
+                    onEnd: () {
                       context.push(const ChooseLangScreen());
                     },
-                    child: const Text(
-                      'Chef App',
-                      style: TextStyle(
-                        color: blackColor,
-                        fontSize: 32,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    child: CustomText(
+                      text: S.of(context).chefApp,
+                      color: blackColor,
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],

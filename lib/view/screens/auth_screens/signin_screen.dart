@@ -9,6 +9,7 @@ import 'package:chef_app/view/screens/home_screen.dart';
 import 'package:chef_app/view_model/cubit/theme/theme_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../generated/l10n.dart';
 import '../../../view_model/cubit/Login/login_cubit.dart';
 import '../../core/custom_text.dart';
 
@@ -63,7 +64,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                     CustomText(
-                      text: 'Welcome Back',
+                      text: S.of(context).welcomeBack,
                       color: whiteColor,
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
@@ -85,13 +86,13 @@ class LoginScreen extends StatelessWidget {
                               CustomTextFormField(
                                 controller: loginCubit.emailController,
                                 textInputType: TextInputType.emailAddress,
-                                hintText: 'E-mail',
+                                hintText: S.of(context).email,
                                 validator: (value) {
                                   if (value!.trim().isEmpty) {
-                                    return "email must be not Empty";
+                                    return  S.of(context).emailMustBeNotEmpty;
                                   } else if (!RegExp(validationEmail)
                                       .hasMatch(value.trim())) {
-                                    return "email is not Valid";
+                                    return S.of(context).emailIsNotValid;
                                   }
                                   return null;
                                 },
@@ -103,7 +104,7 @@ class LoginScreen extends StatelessWidget {
                                 controller: loginCubit.passwordController,
                                 textInputType: TextInputType.visiblePassword,
                                 isPassword: loginCubit.isVisiblePassword,
-                                hintText: 'Password',
+                                hintText: S.of(context).password,
                                 suffixIcon: loginCubit.isVisiblePassword
                                     ? GestureDetector(
                                         onTap: () {
@@ -123,15 +124,15 @@ class LoginScreen extends StatelessWidget {
                                           color: mainColor,
                                         ),
                                       ),
-                                validator: (value) {
-                                  // if (value!.trim().isEmpty) {
-                                  //   return "password must be not Empty";
-                                  // } else if (!RegExp(validationPassword)
-                                  //     .hasMatch(value.trim())) {
-                                  //   return "password is not Valid";
-                                  // }
-                                  return null;
-                                },
+                                // validator: (value) {
+                                //   if (value!.trim().isEmpty) {
+                                //     return S.of(context).passwordMustBeNotEmpty;
+                                //   } else if (!RegExp(validationPassword)
+                                //       .hasMatch(value.trim())) {
+                                //     return S.of(context).passwordIsNotValid;
+                                //   }
+                                //   return null;
+                                // },
                               ),
                             ],
                           ),
@@ -139,9 +140,9 @@ class LoginScreen extends StatelessWidget {
                         const SizedBox(
                           height: 24,
                         ),
-                        const Text(
-                          'forget password?',
-                          style: TextStyle(
+                         Text(
+                          S.of(context).forgetPassword,
+                          style: const TextStyle(
                             color: greyBorder,
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
@@ -154,6 +155,7 @@ class LoginScreen extends StatelessWidget {
                           borderRadius: 10,
                           color: mainColor,
                           onTap: () {
+
                             if (loginCubit.formKey.currentState!.validate()) {
                               loginCubit.signIn(
                                 email: loginCubit.emailController.text,
@@ -164,7 +166,7 @@ class LoginScreen extends StatelessWidget {
                               debugPrint('FAIL!!!!!!');
                             }
                           },
-                          title: 'Sign in',
+                          title: S.of(context).signIn,
                         ),
                         const SizedBox(
                           height: 84,
@@ -172,9 +174,9 @@ class LoginScreen extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Text(
-                              'Don\'t have an account? ',
-                              style: TextStyle(
+                             Text(
+                               S.of(context).dontHaveAccount,
+                              style: const TextStyle(
                                   color: greyBorder,
                                   fontWeight: FontWeight.w500,
                                   fontSize: 18),
@@ -183,9 +185,9 @@ class LoginScreen extends StatelessWidget {
                               onTap: () {
                                 context.push(const SignUpScreen());
                               },
-                              child: const Text(
-                                'Sign Up',
-                                style: TextStyle(
+                              child: Text(
+                                S.of(context).signUp,
+                                style: const TextStyle(
                                   color: mainColor,
                                   fontWeight: FontWeight.w600,
                                   fontSize: 20,

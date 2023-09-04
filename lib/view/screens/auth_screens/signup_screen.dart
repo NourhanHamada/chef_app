@@ -5,6 +5,7 @@ import 'package:chef_app/view_model/cubit/sign_up/sign_up_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:form_builder_image_picker/form_builder_image_picker.dart';
+import '../../../generated/l10n.dart';
 import '../../constants/assets.dart';
 import '../../constants/colors.dart';
 import '../../constants/data.dart';
@@ -12,7 +13,6 @@ import '../../core/custom_button.dart';
 import '../../core/custom_text_form_field.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
-
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -45,11 +45,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     fit: BoxFit.fill,
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 24),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: Text(
-                    'Welcome!',
-                    style: TextStyle(
+                    S.of(context).welcome,
+                    style: const TextStyle(
                       color: whiteColor,
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
@@ -68,7 +68,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     CustomTextFormField(
                       controller: signUpCubit.nameController,
                       textInputType: TextInputType.text,
-                      hintText: 'Name',
+                      hintText: S.of(context).name,
                       validator: (value) {
                         if (value!.trim().isEmpty) {
                           return "name must be not Empty";
@@ -88,12 +88,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     CustomTextFormField(
                       controller: signUpCubit.phoneController,
                       textInputType: TextInputType.phone,
-                      hintText: 'Phone',
+                      hintText: S.of(context).phone,
                       validator: (value) {
                         if (value!.trim().isEmpty) {
                           return "phone must be not Empty";
-                        }
-                          else if (!RegExp(validationPhone)
+                        } else if (!RegExp(validationPhone)
                             .hasMatch(value.trim())) {
                           return "phone is not Valid";
                         }
@@ -109,7 +108,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     CustomTextFormField(
                       controller: signUpCubit.emailController,
                       textInputType: TextInputType.emailAddress,
-                      hintText: 'E-mail',
+                      hintText: S.of(context).email,
                       validator: (value) {
                         if (value!.trim().isEmpty) {
                           return "email must be not Empty";
@@ -130,7 +129,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       controller: signUpCubit.passwordController,
                       isPassword: true,
                       textInputType: TextInputType.visiblePassword,
-                      hintText: 'Password',
+                      hintText: S.of(context).password,
                       validator: (value) {
                         if (value!.trim().isEmpty) {
                           return "password must be not Empty";
@@ -150,7 +149,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     CustomTextFormField(
                       controller: signUpCubit.confirmPasswordController,
                       textInputType: TextInputType.visiblePassword,
-                      hintText: 'Confirm Password',
+                      hintText: S.of(context).confirmPassword,
                       validator: (value) {
                         if (value!.trim().isEmpty) {
                           return "confirm password must be not Empty";
@@ -170,7 +169,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     CustomTextFormField(
                       onTap: () {},
                       controller: signUpCubit.locationController,
-                      hintText: 'Location',
+                      hintText: S.of(context).location,
                       validator: (value) {
                         // if (value!.trim().isEmpty) {
                         //   return "location must be not Empty";
@@ -190,7 +189,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     CustomTextFormField(
                       controller: signUpCubit.brandNameController,
                       textInputType: TextInputType.emailAddress,
-                      hintText: 'Brand Name',
+                      hintText: S.of(context).brandName,
                       validator: (value) {
                         if (value!.trim().isEmpty) {
                           return "brand name must be not Empty";
@@ -207,7 +206,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     CustomTextFormField(
                       controller: signUpCubit.minChargeController,
                       textInputType: TextInputType.emailAddress,
-                      hintText: 'Min Charge',
+                      hintText: S.of(context).minCharge,
                       inputFormatter: [
                         FilteringTextInputFormatter.digitsOnly,
                         LengthLimitingTextInputFormatter(3),
@@ -225,7 +224,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     CustomTextFormField(
                       controller: signUpCubit.descController,
                       textInputType: TextInputType.emailAddress,
-                      hintText: 'Description',
+                      hintText: S.of(context).desc,
                       validator: (value) {
                         if (value!.trim().isEmpty) {
                           return "description must be not Empty";
@@ -241,111 +240,60 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     const SizedBox(
                       height: 16,
                     ),
-                    CustomText(text: 'Front ID', color: blackColor,),
+                    CustomText(
+                      text: S.of(context).frontId,
+                      color: blackColor,
+                    ),
                     FormBuilderImagePicker(
                       name: 'noCamera',
-                      // maxImages: 1,
+                      maxImages: 1,
                       availableImageSources: const [ImageSourceOption.gallery],
                       backgroundColor: greyBorder.withOpacity(.4),
                       iconColor: mainColor,
                       onChanged: (pickedImage) {
                         setState(() {
                           signUpCubit.frontIdImage = pickedImage?.first;
-                          signUpCubit.frontIdController.text = signUpCubit.frontIdImage!;
+                          signUpCubit.frontIdController.text =
+                              signUpCubit.frontIdImage!;
                         });
                       },
-
                     ),
-                    CustomText(text: 'Back ID', color: blackColor,),
+                    CustomText(
+                      text: S.of(context).backId,
+                      color: blackColor,
+                    ),
                     FormBuilderImagePicker(
                       name: 'noCamera',
-                      // maxImages: 1,
+                      maxImages: 1,
                       availableImageSources: const [ImageSourceOption.gallery],
                       backgroundColor: greyBorder.withOpacity(.4),
                       iconColor: mainColor,
                       onChanged: (pickedImage) {
                         setState(() {
                           signUpCubit.backIdImage = pickedImage?.first;
-                          signUpCubit.backIdController.text = signUpCubit.backIdImage!;
+                          signUpCubit.backIdController.text =
+                              signUpCubit.backIdImage!;
                         });
                       },
-
                     ),
-                    CustomText(text: 'Profile Picture', color: blackColor,),
+                    CustomText(
+                      text: S.of(context).profilePic,
+                      color: blackColor,
+                    ),
                     FormBuilderImagePicker(
                       name: 'noCamera',
-                      // maxImages: 1,
+                      maxImages: 1,
                       availableImageSources: const [ImageSourceOption.gallery],
                       backgroundColor: greyBorder.withOpacity(.4),
                       iconColor: mainColor,
                       onChanged: (pickedImage) {
                         setState(() {
                           signUpCubit.profileImage = pickedImage?.first;
-                          signUpCubit.profilePicController.text = signUpCubit.profileImage!;
+                          signUpCubit.profilePicController.text =
+                              signUpCubit.profileImage!;
                         });
                       },
-
                     ),
-                    // CustomTextFormField(
-                    //   controller: signUpCubit.frontIdController,
-                    //   textInputType: TextInputType.emailAddress,
-                    //   hintText: 'Front ID',
-                    //   validator: (value) {
-                    //     if (value!.trim().isEmpty) {
-                    //       return "front ID must be not Empty";
-                    //     }
-                    //     return null;
-                    //   },
-                    // ),
-                    // const SizedBox(
-                    //   height: 16,
-                    // ),
-                    // CustomTextFormField(
-                    //   controller: signUpCubit.backIdController,
-                    //   textInputType: TextInputType.emailAddress,
-                    //   hintText: 'Back Id',
-                    //   validator: (value) {
-                    //     if (value!.trim().isEmpty) {
-                    //       return "back ID must be not Empty";
-                    //     }
-                    //     return null;
-                    //   },
-                    // ),
-                    // const SizedBox(
-                    //   height: 32,
-                    // ),
-                    // CustomTextFormField(
-                    //   controller: signUpCubit.emailController,
-                    //   textInputType: TextInputType.emailAddress,
-                    //   hintText: 'E-mail',
-                    //   validator: (value) {
-                    //     if (value!.trim().isEmpty) {
-                    //       return "email must be not Empty";
-                    //     } else if (!RegExp(validationEmail)
-                    //         .hasMatch(value.trim())) {
-                    //       return "email is not Valid";
-                    //     }
-                    //     return null;
-                    //   },
-                    // ),
-                    // const SizedBox(
-                    //   height: 32,
-                    // ),
-                    // CustomTextFormField(
-                    //   controller: signUpCubit.passwordController,
-                    //   textInputType: TextInputType.visiblePassword,
-                    //   isPassword: true,
-                    //   hintText: 'Password',
-                    //   validator: (value) {
-                    //     if (value!.trim().isEmpty) {
-                    //       return "password must be not Empty";
-                    //     } else if (!RegExp(validationPassword)
-                    //         .hasMatch(value.trim())) {
-                    //       return "password is not Valid";
-                    //     }
-                    //     return null;
-                    //   },
-                    // ),
                   ],
                 ),
               ),
@@ -355,47 +303,31 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 const SizedBox(
                   height: 16,
                 ),
-                const Text(
-                  'forget password?',
-                  style: TextStyle(
-                    color: greyBorder,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
                 CustomButton(
                   borderRadius: 10,
                   color: mainColor,
                   onTap: () {
-
-
-                    if(signUpCubit.formKey.currentState!.validate()) {
+                    if (signUpCubit.formKey.currentState!.validate()) {
                       debugPrint('Form Validate Successfully!!!!!');
-
 
                       signUpCubit.signUp(
                           name: signUpCubit.nameController.text,
                           phone: signUpCubit.phoneController.text,
                           email: signUpCubit.emailController.text,
                           password: signUpCubit.passwordController.text,
-                          confirmPassword: signUpCubit.confirmPasswordController.text,
+                          confirmPassword:
+                              signUpCubit.confirmPasswordController.text,
                           brandName: signUpCubit.brandNameController.text,
                           minCharge: signUpCubit.minChargeController.text,
                           disc: signUpCubit.descController.text,
                           backId: signUpCubit.backIdController.text,
                           frontId: signUpCubit.frontIdController.text,
-                          profile: signUpCubit.profilePicController.text
-                      );
-
-
+                          profile: signUpCubit.profilePicController.text);
                     } else {
                       debugPrint('FAIL!!!!!!');
                     }
                   },
-                  title: 'Sign up',
+                  title: S.of(context).signUp,
                 ),
                 const SizedBox(
                   height: 16,
@@ -403,9 +335,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(
-                      'Already have an account? ',
-                      style: TextStyle(
+                    Text(
+                      S.of(context).alreadyHaveAccount,
+                      style: const TextStyle(
                           color: greyBorder,
                           fontWeight: FontWeight.w500,
                           fontSize: 18),
@@ -414,9 +346,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       onTap: () {
                         context.push(const LoginScreen());
                       },
-                      child: const Text(
-                        'Sign In',
-                        style: TextStyle(
+                      child: Text(
+                        S.of(context).signIn,
+                        style: const TextStyle(
                           color: mainColor,
                           fontWeight: FontWeight.w600,
                           fontSize: 20,

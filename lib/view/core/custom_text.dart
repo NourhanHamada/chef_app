@@ -1,5 +1,6 @@
 import 'package:chef_app/view/constants/colors.dart';
 import 'package:chef_app/view_model/cubit/theme/theme_cubit.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -30,7 +31,7 @@ class CustomText extends StatelessWidget {
   Widget build(BuildContext context) {
     ThemeCubit themeCubit = BlocProvider.of(context, listen: true);
     return Text(
-      text.toString(),
+      text.tr().toString(),
       style: GoogleFonts.lato(
           color: color ?? (themeCubit.isDark ? whiteColor : blackColor),
           fontSize: fontSize ?? 14,

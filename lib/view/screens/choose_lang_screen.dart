@@ -3,6 +3,9 @@ import 'package:chef_app/view/constants/colors.dart';
 import 'package:chef_app/view/constants/extentions.dart';
 import 'package:chef_app/view/screens/auth_screens/signin_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../generated/l10n.dart';
+import '../../view_model/cubit/localization/localization_cubit.dart';
 import '../core/custom_button.dart';
 
 class ChooseLangScreen extends StatelessWidget {
@@ -10,6 +13,8 @@ class ChooseLangScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    LocalizationCubit localizationCubit =
+        BlocProvider.of<LocalizationCubit>(context, listen: true);
     return Scaffold(
       body: Center(
         child: Stack(
@@ -18,7 +23,10 @@ class ChooseLangScreen extends StatelessWidget {
             SizedBox(
               height: double.infinity,
               width: double.infinity,
-              child: Image.asset(background, fit: BoxFit.fill,),
+              child: Image.asset(
+                background,
+                fit: BoxFit.fill,
+              ),
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -27,9 +35,9 @@ class ChooseLangScreen extends StatelessWidget {
                 const SizedBox(
                   height: 16,
                 ),
-                const Text(
-                  'Welcome to Chef App',
-                  style: TextStyle(
+                Text(
+                  S.of(context).chooseLangTitle,
+                  style: const TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.w700,
                   ),
@@ -37,9 +45,9 @@ class ChooseLangScreen extends StatelessWidget {
                 const SizedBox(
                   height: 48,
                 ),
-                const Text(
-                  'Please choose your language',
-                  style: TextStyle(
+                Text(
+                  S.of(context).chooseLangSubTitle,
+                  style: const TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.w400,
                   ),
@@ -47,11 +55,12 @@ class ChooseLangScreen extends StatelessWidget {
                 const SizedBox(
                   height: 56,
                 ),
-                 Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     CustomButton(
-                      onTap: (){
+                      onTap: () {
+                        localizationCubit.changeLanguageToEnglish();
                         context.push(const LoginScreen());
                       },
                       borderRadius: 10,
@@ -60,8 +69,9 @@ class ChooseLangScreen extends StatelessWidget {
                       width: 140,
                     ),
                     CustomButton(
-                      onTap: (){
+                      onTap: () {
                         context.push(const LoginScreen());
+                        localizationCubit.changeLanguageToArabic();
                       },
                       borderRadius: 10,
                       color: blackColor,
