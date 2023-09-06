@@ -4,7 +4,7 @@ import 'package:chef_app/view/constants/extentions.dart';
 import 'package:chef_app/view/core/custom_button.dart';
 import 'package:chef_app/view/core/custom_text_form_field.dart';
 import 'package:chef_app/view/screens/auth_screens/signup_screen.dart';
-import 'package:chef_app/view/screens/home_screen.dart';
+import 'package:chef_app/view/screens/layout/home_screen.dart';
 import 'package:chef_app/view/widgets/login/login_custom_clipper.dart';
 import 'package:chef_app/view_model/cubit/theme/theme_cubit.dart';
 import 'package:flutter/material.dart';

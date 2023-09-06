@@ -1,17 +1,13 @@
 import 'package:chef_app/generated/l10n.dart';
 import 'package:chef_app/view/core/dark_theme.dart';
 import 'package:chef_app/view/core/light_theme.dart';
-import 'package:chef_app/view/screens/auth_screens/forget_password_screen.dart';
-import 'package:chef_app/view/screens/auth_screens/reset_password_screen.dart';
-import 'package:chef_app/view/screens/auth_screens/signin_screen.dart';
-import 'package:chef_app/view/screens/choose_lang_screen.dart';
 import 'package:chef_app/view/screens/layout/layout.dart';
-import 'package:chef_app/view/screens/splash_screen.dart';
 import 'package:chef_app/view_model/cubit/Login/login_cubit.dart';
 import 'package:chef_app/view_model/cubit/edit_profile/edit_profile_cubit.dart';
 import 'package:chef_app/view_model/cubit/forget_password/forget_password_cubit.dart';
 import 'package:chef_app/view_model/cubit/layout/layout_cubit.dart';
 import 'package:chef_app/view_model/cubit/localization/localization_cubit.dart';
+import 'package:chef_app/view_model/cubit/meal/meal_cubit.dart';
 import 'package:chef_app/view_model/cubit/reset_password/reset_password_cubit.dart';
 import 'package:chef_app/view_model/cubit/sign_up/sign_up_cubit.dart';
 import 'package:chef_app/view_model/cubit/theme/theme_cubit.dart';
@@ -50,6 +46,9 @@ void main() async {
         ),
         BlocProvider(
           create: (context) => EditProfileCubit(),
+        ),
+        BlocProvider(
+          create: (context) => MealCubit(),
         ),
       ],
       child: const MyApp(),
