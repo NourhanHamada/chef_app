@@ -8,7 +8,20 @@ class LocalizationCubit extends Cubit<LocalizationState> {
 
   LocalizationCubit get(context) => BlocProvider.of(context);
 
-  String local = 'en';
+
+  bool isArabic = true;
+  String local = 'ar';
+
+  switchLang(bool value){
+    isArabic = value;
+    value = !value;
+    if(isArabic == true) {
+      local = 'ar';
+    } else {
+      local = 'en';
+    }
+    emit(SwitchLangState());
+  }
 
   changeLanguageToArabic(){
     local = 'ar';
