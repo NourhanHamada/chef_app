@@ -38,5 +38,8 @@
   "setting": "Setting",
   "logout": "Logout",
   "meal": "Meal",
-  "profile": "Profile"
+  "profile": "Profile",
+  "darkMode": "Dark Mode",
+  "arabic": "Arabic",
+  "update": "Update"
 }

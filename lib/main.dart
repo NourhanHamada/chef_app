@@ -8,6 +8,7 @@ import 'package:chef_app/view/screens/choose_lang_screen.dart';
 import 'package:chef_app/view/screens/layout/layout.dart';
 import 'package:chef_app/view/screens/splash_screen.dart';
 import 'package:chef_app/view_model/cubit/Login/login_cubit.dart';
+import 'package:chef_app/view_model/cubit/edit_profile/edit_profile_cubit.dart';
 import 'package:chef_app/view_model/cubit/forget_password/forget_password_cubit.dart';
 import 'package:chef_app/view_model/cubit/layout/layout_cubit.dart';
 import 'package:chef_app/view_model/cubit/localization/localization_cubit.dart';
@@ -46,6 +47,9 @@ void main() async {
         ),
         BlocProvider(
           create: (context) => LayoutCubit(),
+        ),
+        BlocProvider(
+          create: (context) => EditProfileCubit(),
         ),
       ],
       child: const MyApp(),

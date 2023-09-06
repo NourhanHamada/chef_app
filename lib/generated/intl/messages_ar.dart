@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "alreadyHaveAccount":
             MessageLookupByLibrary.simpleMessage("لديك حساب بالفعل؟ "),
+        "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "backId": MessageLookupByLibrary.simpleMessage("خلف البطاقة"),
         "brandName": MessageLookupByLibrary.simpleMessage("اسم الماركة"),
         "chefApp": MessageLookupByLibrary.simpleMessage("تطبيق الشيف"),
@@ -36,6 +37,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("إنشاء كلمة مرور جديدة"),
+        "darkMode": MessageLookupByLibrary.simpleMessage("الوضع الليلي"),
         "desc": MessageLookupByLibrary.simpleMessage("تفاصيل"),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟ "),
@@ -74,6 +76,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "setting": MessageLookupByLibrary.simpleMessage("الاعدادات"),
         "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "signUp": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
+        "update": MessageLookupByLibrary.simpleMessage("تحديث"),
         "welcome": MessageLookupByLibrary.simpleMessage("أهلاً بك"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("أهلاً بعودتك")
       };

@@ -1,12 +1,12 @@
 import 'package:chef_app/view/constants/colors.dart';
 import 'package:chef_app/view/constants/extentions.dart';
-import 'package:chef_app/view/core/customAppbar.dart';
 import 'package:chef_app/view/core/custom_text.dart';
 import 'package:chef_app/view_model/cubit/localization/localization_cubit.dart';
+import 'package:chef_app/view_model/cubit/theme/theme_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../../generated/l10n.dart';
+import '../../widgets/setting/setting_screen_item.dart';
 
 class SettingScreen extends StatefulWidget {
   const SettingScreen({super.key});
@@ -20,7 +20,14 @@ bool x = false;
 class _SettingScreenState extends State<SettingScreen> {
   @override
   Widget build(BuildContext context) {
-    LocalizationCubit localizationCubit = BlocProvider.of(context, listen: true,);
+    LocalizationCubit localizationCubit = BlocProvider.of<LocalizationCubit>(
+      context,
+      listen: true,
+    );
+    ThemeCubit themeCubit = BlocProvider.of<ThemeCubit>(
+      context,
+      listen: true,
+    );
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -44,29 +51,22 @@ class _SettingScreenState extends State<SettingScreen> {
         padding: const EdgeInsets.all(24.0),
         child: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CustomText(
-                  text: 'العربية',
-                  fontSize: 16,
-                ),
-                Switch(
-                  value: localizationCubit.isArabic,
-                  onChanged: (value) {
-                    localizationCubit.switchLang(value);
-                    // setState(() {
-                    //   x = value;
-                    //   value = !value;
-                    //   print(x);
-                    // });
-                  },
-                  activeColor: whiteColor,
-                  activeTrackColor: mainColor,
-                  inactiveThumbColor: whiteColor,
-                  inactiveTrackColor: greyBorder,
-                ),
-              ],
+            SettingScreenItem(
+              title: S.of(context).arabic,
+              value: localizationCubit.isArabic,
+              onChanged: (value) {
+                localizationCubit.switchLang(value);
+              },
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            SettingScreenItem(
+              title: S.of(context).darkMode,
+              value: themeCubit.isDark,
+              onChanged: (value) {
+                themeCubit.changeThemeMode();
+              },
             ),
           ],
         ),
@@ -74,3 +74,5 @@ class _SettingScreenState extends State<SettingScreen> {
     );
   }
 }
+
+

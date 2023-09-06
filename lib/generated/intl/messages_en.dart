@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "alreadyHaveAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account? "),
+        "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "backId": MessageLookupByLibrary.simpleMessage("Back Id"),
         "brandName": MessageLookupByLibrary.simpleMessage("Brand Name"),
         "chefApp": MessageLookupByLibrary.simpleMessage("Chef App"),
@@ -36,6 +37,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Create New Password"),
+        "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "desc": MessageLookupByLibrary.simpleMessage("Description"),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account? "),
@@ -72,6 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "setting": MessageLookupByLibrary.simpleMessage("Setting"),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign In"),
+        "update": MessageLookupByLibrary.simpleMessage("Update"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome back!")
       };

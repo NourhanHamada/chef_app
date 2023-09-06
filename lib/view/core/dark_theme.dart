@@ -13,5 +13,8 @@ darkTheme(context) {
       appBarTheme: const AppBarTheme(
         backgroundColor: mainColor,
       ),
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        backgroundColor: blackColor,
+    ),
   );
 }

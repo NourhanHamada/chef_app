@@ -12,6 +12,9 @@ lightTheme(context) {
     scaffoldBackgroundColor: whiteColor,
     appBarTheme: const AppBarTheme(
       backgroundColor: mainColor,
-    )
+    ),
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      backgroundColor: whiteColor
+    ),
   );
 }

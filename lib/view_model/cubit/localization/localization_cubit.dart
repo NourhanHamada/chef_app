@@ -25,12 +25,10 @@ class LocalizationCubit extends Cubit<LocalizationState> {
 
   changeLanguageToArabic(){
     local = 'ar';
-    print(local);
     emit(ChangeLanguageToArabic());
   }
   changeLanguageToEnglish(){
     local = 'en';
-    print(local);
     emit(ChangeLanguageToEnglish());
   }
 }

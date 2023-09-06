@@ -1,4 +1,3 @@
-import 'package:chef_app/view/constants/assets.dart';
 import 'package:chef_app/view/screens/layout/home_screen.dart';
 import 'package:chef_app/view/screens/layout/profile_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -18,30 +17,31 @@ class LayoutCubit extends Cubit<LayoutState> {
     const ProfileScreen(),
   ];
 
-  List<BottomNavigationBarItem> bottomNavBarItems = [
-     BottomNavigationBarItem(
-      activeIcon: Padding(
-        padding: const EdgeInsets.only(bottom: 8),
-        child: Image.asset(homeEnable),
-      ),
-      icon: Padding(
-        padding: const EdgeInsets.only(bottom: 8),
-        child: Image.asset(homeDisable),
-      ),
-      label: 'Meal'
-    ),
-    BottomNavigationBarItem(
-        activeIcon: Padding(
-          padding: const EdgeInsets.only(bottom: 8),
-          child: Image.asset(profileEnable),
-        ),
-        icon: Padding(
-          padding: const EdgeInsets.only(bottom: 8),
-          child: Image.asset(profileDisable),
-        ),
-        label: 'Profile'
-    ),
-  ];
+
+  // List<BottomNavigationBarItem> bottomNavBarItems = [
+  //    BottomNavigationBarItem(
+  //     activeIcon: Padding(
+  //       padding: const EdgeInsets.only(bottom: 8),
+  //       child: Image.asset(homeEnable, color: primaryColor,),
+  //     ),
+  //     icon: Padding(
+  //       padding: const EdgeInsets.only(bottom: 8),
+  //       child: Image.asset(homeDisable),
+  //     ),
+  //     label: S.of(context).meal
+  //   ),
+  //   BottomNavigationBarItem(
+  //       activeIcon: Padding(
+  //         padding: const EdgeInsets.only(bottom: 8),
+  //         child: Image.asset(profileEnable),
+  //       ),
+  //       icon: Padding(
+  //         padding: const EdgeInsets.only(bottom: 8),
+  //         child: Image.asset(profileDisable),
+  //       ),
+  //       label: 'Profile'
+  //   ),
+  // ];
 
   changeIndex({required int index}) {
     currentIndex = index;

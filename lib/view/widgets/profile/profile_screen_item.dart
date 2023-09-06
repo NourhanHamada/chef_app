@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../constants/colors.dart';
 import '../../core/custom_text.dart';
 
@@ -28,7 +27,7 @@ class ProfileScreenItems extends StatelessWidget {
         children: [
           Image.asset(
             icon,
-            color: color ?? blackColor,
+            color: color ?? greyBorder,
           ),
           const SizedBox(
             width: 12,
@@ -36,6 +35,7 @@ class ProfileScreenItems extends StatelessWidget {
           CustomText(
             text: title,
             fontSize: 16,
+            color: color,
           ),
         ],
       ),
