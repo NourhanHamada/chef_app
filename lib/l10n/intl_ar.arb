@@ -29,5 +29,9 @@
 
   "forgetPasswordScreen": "نسيت كلمة المرور",
   "enterYourEmail": "ادخل البريد الالكترني و سنرسل لك رمز لـتغيير كلمة المرور",
-  "sendCode": "إرسال الرمز"
+  "sendCode": "إرسال الرمز",
+  "createNewPassword": "إنشاء كلمة مرور جديدة",
+  "newPassword": "كلمة مرور جديدة",
+  "code": "الرمز",
+  "resetPassword": "تغيير كلمة المرور"
 }

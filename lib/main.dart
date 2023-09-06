@@ -2,12 +2,14 @@ import 'package:chef_app/generated/l10n.dart';
 import 'package:chef_app/view/core/dark_theme.dart';
 import 'package:chef_app/view/core/light_theme.dart';
 import 'package:chef_app/view/screens/auth_screens/forget_password_screen.dart';
+import 'package:chef_app/view/screens/auth_screens/reset_password_screen.dart';
 import 'package:chef_app/view/screens/auth_screens/signin_screen.dart';
 import 'package:chef_app/view/screens/choose_lang_screen.dart';
 import 'package:chef_app/view/screens/splash_screen.dart';
 import 'package:chef_app/view_model/cubit/Login/login_cubit.dart';
 import 'package:chef_app/view_model/cubit/forget_password/forget_password_cubit.dart';
 import 'package:chef_app/view_model/cubit/localization/localization_cubit.dart';
+import 'package:chef_app/view_model/cubit/reset_password/reset_password_cubit.dart';
 import 'package:chef_app/view_model/cubit/sign_up/sign_up_cubit.dart';
 import 'package:chef_app/view_model/cubit/theme/theme_cubit.dart';
 import 'package:chef_app/view_model/database/networking/dio_helper.dart';
@@ -36,6 +38,9 @@ void main() async {
         ),
         BlocProvider(
           create: (context) => ForgetPasswordCubit(),
+        ),
+        BlocProvider(
+          create: (context) => ResetPasswordCubit(),
         ),
       ],
       child: const MyApp(),

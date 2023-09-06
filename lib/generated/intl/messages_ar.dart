@@ -31,8 +31,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("من فضلك اختر لغتك"),
         "chooseLangTitle":
             MessageLookupByLibrary.simpleMessage("أهلاً بك في تطبيق الشيف"),
+        "code": MessageLookupByLibrary.simpleMessage("الرمز"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
+        "createNewPassword":
+            MessageLookupByLibrary.simpleMessage("إنشاء كلمة مرور جديدة"),
         "desc": MessageLookupByLibrary.simpleMessage("تفاصيل"),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟ "),
@@ -52,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "location": MessageLookupByLibrary.simpleMessage("الموقع"),
         "minCharge": MessageLookupByLibrary.simpleMessage("الحد الأدنى للرسوم"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "newPassword": MessageLookupByLibrary.simpleMessage("كلمة مرور جديدة"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "passwordIsNotValid":
             MessageLookupByLibrary.simpleMessage("كلمة المرور غير صالحة"),
@@ -59,6 +63,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "كلمة المرور يجب ألا تكون فارغة"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "profilePic": MessageLookupByLibrary.simpleMessage("صورة شخصية"),
+        "resetPassword":
+            MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
         "sendCode": MessageLookupByLibrary.simpleMessage("إرسال الرمز"),
         "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "signUp": MessageLookupByLibrary.simpleMessage("انشاء حساب"),

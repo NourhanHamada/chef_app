@@ -54,4 +54,28 @@ class DioHelper {
       rethrow;
     }
   }
+
+  static Future<Response> patchData({
+    required String endPoint,
+    FormData? formData,
+    Map<String, dynamic>? data,
+    String? token,
+    ProgressCallback? onReceiveProgress,
+    ProgressCallback? onSendProgress,
+  }) async {
+    try {
+      dio.options.headers = {
+        'Authorization': 'Bearer ${token ?? ''}',
+      };
+      final Response response = await dio.patch(
+        endPoint,
+        data: data,
+        onReceiveProgress: onReceiveProgress,
+        onSendProgress: onSendProgress,
+      );
+      return response;
+    } catch (e) {
+      rethrow;
+    }
+  }
 }

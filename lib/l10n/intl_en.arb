@@ -29,5 +29,9 @@
 
   "forgetPasswordScreen": "Forget password",
   "enterYourEmail": "Enter Your mail and we will send you code to rest your password",
-  "sendCode": "Send Code"
+  "sendCode": "Send Code",
+  "createNewPassword": "Create New Password",
+  "newPassword": "New Password",
+  "code": "Code",
+  "resetPassword": "Reset Password"
 }

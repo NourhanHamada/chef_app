@@ -10,14 +10,17 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
 
   ForgetPasswordCubit get(context) => BlocProvider.of(context);
 
+  var key = GlobalKey<FormState>();
   TextEditingController emailController = TextEditingController();
 
+  late String errorMessage;
   Future forgetPasswordSendCode({
     required String email,
   }) async {
     emit(ForgetPasswordLoading());
     var data = {
       'email': email,
+      // 'email': 'nourhan.hamada996@gmail.com',
     };
     await DioHelper.postData(
       endPoint: forgetPasswordSendCodeEndPoint,
@@ -28,7 +31,9 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
       emit(ForgetPasswordSuccess());
     }).catchError((onError) {
       debugPrint('FAIL');
-      debugPrint(onError.toString());
+      // errorMessage = onError.response.data['ErrorMessage'].toString();
+      // print('error---------> $errorMessage');
+      debugPrint(onError.response.toString());
       emit(ForgetPasswordFail());
     });
   }

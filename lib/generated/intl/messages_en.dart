@@ -31,8 +31,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please choose your language"),
         "chooseLangTitle":
             MessageLookupByLibrary.simpleMessage("Welcome to Chef App"),
+        "code": MessageLookupByLibrary.simpleMessage("Code"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
+        "createNewPassword":
+            MessageLookupByLibrary.simpleMessage("Create New Password"),
         "desc": MessageLookupByLibrary.simpleMessage("Description"),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account? "),
@@ -52,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "location": MessageLookupByLibrary.simpleMessage("Location"),
         "minCharge": MessageLookupByLibrary.simpleMessage("Minimum Charge"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "newPassword": MessageLookupByLibrary.simpleMessage("New Password"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordIsNotValid":
             MessageLookupByLibrary.simpleMessage("Password is not valid"),
@@ -59,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Password must be not empty"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "profilePic": MessageLookupByLibrary.simpleMessage("Profile Picture"),
+        "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
         "sendCode": MessageLookupByLibrary.simpleMessage("Send Code"),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign In"),
