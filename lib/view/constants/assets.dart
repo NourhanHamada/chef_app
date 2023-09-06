@@ -14,3 +14,7 @@ const String homeEnable = 'assets/icons/home_enable.png';
 const String homeDisable = 'assets/icons/home_disable.png';
 const String profileEnable = 'assets/icons/profile_enable.png';
 const String profileDisable = 'assets/icons/profile_disable.png';
+const String profile = 'assets/icons/edit_profile.png';
+const String hide = 'assets/icons/hide.png';
+const String setting = 'assets/icons/setting.png';
+const String logout = 'assets/icons/logout.png';

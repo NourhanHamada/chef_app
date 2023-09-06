@@ -33,5 +33,10 @@
   "createNewPassword": "إنشاء كلمة مرور جديدة",
   "newPassword": "كلمة مرور جديدة",
   "code": "الرمز",
-  "resetPassword": "تغيير كلمة المرور"
+  "resetPassword": "تغيير كلمة المرور",
+  "editProfile": "تعديل الصفحة الشخصية",
+  "setting": "الاعدادات",
+  "logout": "تسجيل الخروج",
+  "meal": "الوجبات",
+  "profile": "الصفحة الشخصية"
 }

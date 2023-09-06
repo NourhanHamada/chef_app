@@ -39,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "desc": MessageLookupByLibrary.simpleMessage("Description"),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account? "),
+        "editProfile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
         "email": MessageLookupByLibrary.simpleMessage("E-mail"),
         "emailIsNotValid":
             MessageLookupByLibrary.simpleMessage("E-mail is not valid"),
@@ -53,6 +54,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "frontId": MessageLookupByLibrary.simpleMessage("Front ID"),
         "hello": MessageLookupByLibrary.simpleMessage("Hello"),
         "location": MessageLookupByLibrary.simpleMessage("Location"),
+        "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+        "meal": MessageLookupByLibrary.simpleMessage("Meal"),
         "minCharge": MessageLookupByLibrary.simpleMessage("Minimum Charge"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "newPassword": MessageLookupByLibrary.simpleMessage("New Password"),
@@ -62,9 +65,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordMustBeNotEmpty":
             MessageLookupByLibrary.simpleMessage("Password must be not empty"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "profilePic": MessageLookupByLibrary.simpleMessage("Profile Picture"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
         "sendCode": MessageLookupByLibrary.simpleMessage("Send Code"),
+        "setting": MessageLookupByLibrary.simpleMessage("Setting"),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign In"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),

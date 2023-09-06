@@ -39,6 +39,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "desc": MessageLookupByLibrary.simpleMessage("تفاصيل"),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟ "),
+        "editProfile":
+            MessageLookupByLibrary.simpleMessage("تعديل الصفحة الشخصية"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
         "emailIsNotValid":
             MessageLookupByLibrary.simpleMessage("البريد الالكترني غير صالح"),
@@ -53,6 +55,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "frontId": MessageLookupByLibrary.simpleMessage("مقدمة البطاقة"),
         "hello": MessageLookupByLibrary.simpleMessage("مرحبًا"),
         "location": MessageLookupByLibrary.simpleMessage("الموقع"),
+        "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
+        "meal": MessageLookupByLibrary.simpleMessage("الوجبات"),
         "minCharge": MessageLookupByLibrary.simpleMessage("الحد الأدنى للرسوم"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "newPassword": MessageLookupByLibrary.simpleMessage("كلمة مرور جديدة"),
@@ -62,10 +66,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordMustBeNotEmpty": MessageLookupByLibrary.simpleMessage(
             "كلمة المرور يجب ألا تكون فارغة"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "profile": MessageLookupByLibrary.simpleMessage("الصفحة الشخصية"),
         "profilePic": MessageLookupByLibrary.simpleMessage("صورة شخصية"),
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
         "sendCode": MessageLookupByLibrary.simpleMessage("إرسال الرمز"),
+        "setting": MessageLookupByLibrary.simpleMessage("الاعدادات"),
         "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "signUp": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
         "welcome": MessageLookupByLibrary.simpleMessage("أهلاً بك"),

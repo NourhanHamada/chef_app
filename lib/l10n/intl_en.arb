@@ -33,5 +33,10 @@
   "createNewPassword": "Create New Password",
   "newPassword": "New Password",
   "code": "Code",
-  "resetPassword": "Reset Password"
+  "resetPassword": "Reset Password",
+  "editProfile": "Edit Profile",
+  "setting": "Setting",
+  "logout": "Logout",
+  "meal": "Meal",
+  "profile": "Profile"
 }
