@@ -1,4 +1,3 @@
-import 'package:chef_app/view/constants/assets.dart';
 import 'package:chef_app/view/constants/colors.dart';
 import 'package:chef_app/view/constants/data.dart';
 import 'package:chef_app/view/constants/extentions.dart';
@@ -6,12 +5,14 @@ import 'package:chef_app/view/core/custom_button.dart';
 import 'package:chef_app/view/core/custom_text_form_field.dart';
 import 'package:chef_app/view/screens/auth_screens/signup_screen.dart';
 import 'package:chef_app/view/screens/home_screen.dart';
+import 'package:chef_app/view/widgets/login/login_custom_clipper.dart';
 import 'package:chef_app/view_model/cubit/theme/theme_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../generated/l10n.dart';
 import '../../../view_model/cubit/Login/login_cubit.dart';
 import '../../core/custom_text.dart';
+import '../../widgets/login/login_second_custom_clipper.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -56,25 +57,44 @@ class LoginScreen extends StatelessWidget {
                 Stack(
                   alignment: Alignment.center,
                   children: [
-                    SizedBox(
-                      width: double.infinity,
-                      child: Image.asset(
-                        topBackground,
-                        fit: BoxFit.fill,
+                    ClipPath(
+                      clipper: LoginCustomClipper(),
+                      child: Container(
+                        color: mainColor,
+                        width: double.infinity,
+                        height: 400,
                       ),
                     ),
-                    CustomText(
-                      text: S.of(context).welcomeBack,
-                      color: whiteColor,
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold,
+                    ClipPath(
+                      clipper: LoginSecondCustomClipper(),
+                      child: Container(
+                        color: mainColorWithOpacity,
+                        width: double.infinity,
+                        height: 400,
+                      ),
+                    ),
+                    // SizedBox(
+                    //   width: double.infinity,
+                    //   child: Image.asset(
+                    //     topBackground,
+                    //     fit: BoxFit.fill,
+                    //   ),
+                    // ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 80),
+                      child: CustomText(
+                        text: S.of(context).welcomeBack,
+                        color: whiteColor,
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                      ),
                     )
                   ],
                 ),
                 SizedBox(
-                  height: MediaQuery.sizeOf(context).height / 1.5,
+                  // height: MediaQuery.sizeOf(context).height / 1.5,
                   child: Padding(
-                    padding: const EdgeInsets.all(24.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 24),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
