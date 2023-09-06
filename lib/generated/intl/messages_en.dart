@@ -41,6 +41,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("E-mail is not valid"),
         "emailMustBeNotEmpty":
             MessageLookupByLibrary.simpleMessage("E-mail must be not empty"),
+        "enterYourEmail": MessageLookupByLibrary.simpleMessage(
+            "Enter Your mail and we will send you code to rest your password"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("Forget password?"),
         "forgetPasswordScreen":
@@ -57,6 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Password must be not empty"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "profilePic": MessageLookupByLibrary.simpleMessage("Profile Picture"),
+        "sendCode": MessageLookupByLibrary.simpleMessage("Send Code"),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign In"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),

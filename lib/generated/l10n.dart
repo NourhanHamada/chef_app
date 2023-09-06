@@ -329,6 +329,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Enter Your mail and we will send you code to rest your password`
+  String get enterYourEmail {
+    return Intl.message(
+      'Enter Your mail and we will send you code to rest your password',
+      name: 'enterYourEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send Code`
+  String get sendCode {
+    return Intl.message(
+      'Send Code',
+      name: 'sendCode',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

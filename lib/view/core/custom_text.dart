@@ -32,6 +32,7 @@ class CustomText extends StatelessWidget {
     ThemeCubit themeCubit = BlocProvider.of(context, listen: true);
     return Text(
       text.tr().toString(),
+      textAlign: textAlign,
       style: GoogleFonts.lato(
           color: color ?? (themeCubit.isDark ? whiteColor : blackColor),
           fontSize: fontSize ?? 14,

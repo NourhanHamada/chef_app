@@ -27,5 +27,7 @@
   "profilePic": "Profile Picture",
   "alreadyHaveAccount": "Already have an account? ",
 
-  "forgetPasswordScreen": "Forget password"
+  "forgetPasswordScreen": "Forget password",
+  "enterYourEmail": "Enter Your mail and we will send you code to rest your password",
+  "sendCode": "Send Code"
 }

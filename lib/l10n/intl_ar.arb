@@ -27,6 +27,7 @@
   "profilePic": "صورة شخصية",
   "alreadyHaveAccount": "لديك حساب بالفعل؟ ",
 
-  "forgetPasswordScreen": "نسيت كلمة المرور"
-
+  "forgetPasswordScreen": "نسيت كلمة المرور",
+  "enterYourEmail": "ادخل البريد الالكترني و سنرسل لك رمز لـتغيير كلمة المرور",
+  "sendCode": "إرسال الرمز"
 }

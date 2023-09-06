@@ -41,6 +41,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("البريد الالكترني غير صالح"),
         "emailMustBeNotEmpty": MessageLookupByLibrary.simpleMessage(
             "البريد الالكترني يجب ألا يكون فارغ"),
+        "enterYourEmail": MessageLookupByLibrary.simpleMessage(
+            "ادخل البريد الالكترني و سنرسل لك رمز لـتغيير كلمة المرور"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "forgetPasswordScreen":
@@ -57,6 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "كلمة المرور يجب ألا تكون فارغة"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "profilePic": MessageLookupByLibrary.simpleMessage("صورة شخصية"),
+        "sendCode": MessageLookupByLibrary.simpleMessage("إرسال الرمز"),
         "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "signUp": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
         "welcome": MessageLookupByLibrary.simpleMessage("أهلاً بك"),

@@ -6,6 +6,7 @@ import 'package:chef_app/view/screens/auth_screens/signin_screen.dart';
 import 'package:chef_app/view/screens/choose_lang_screen.dart';
 import 'package:chef_app/view/screens/splash_screen.dart';
 import 'package:chef_app/view_model/cubit/Login/login_cubit.dart';
+import 'package:chef_app/view_model/cubit/forget_password/forget_password_cubit.dart';
 import 'package:chef_app/view_model/cubit/localization/localization_cubit.dart';
 import 'package:chef_app/view_model/cubit/sign_up/sign_up_cubit.dart';
 import 'package:chef_app/view_model/cubit/theme/theme_cubit.dart';
@@ -32,9 +33,13 @@ void main() async {
         ),
         BlocProvider(
           create: (context) => LocalizationCubit(),
-        )
+        ),
+        BlocProvider(
+          create: (context) => ForgetPasswordCubit(),
+        ),
       ],
-          child: const MyApp(),),
+      child: const MyApp(),
+    ),
   );
   // FlutterNativeSplash.remove();
 }
@@ -45,7 +50,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ThemeCubit themeCubit = BlocProvider.of<ThemeCubit>(context, listen: true);
-    LocalizationCubit localizationCubit = BlocProvider.of<LocalizationCubit>(context, listen: true);
+    LocalizationCubit localizationCubit =
+        BlocProvider.of<LocalizationCubit>(context, listen: true);
     return MaterialApp(
       locale: Locale(localizationCubit.local),
       localizationsDelegates: const [
@@ -59,7 +65,7 @@ class MyApp extends StatelessWidget {
       theme: lightTheme(context),
       darkTheme: darkTheme(context),
       themeMode: themeCubit.isDark ? ThemeMode.dark : ThemeMode.light,
-      home: const LoginScreen(),
+      home: const ForgetPasswordScreen(),
     );
   }
 }
