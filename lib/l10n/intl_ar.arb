@@ -25,5 +25,8 @@
   "frontId": "مقدمة البطاقة",
   "backId": "خلف البطاقة",
   "profilePic": "صورة شخصية",
-  "alreadyHaveAccount": "لديك حساب بالفعل؟ "
+  "alreadyHaveAccount": "لديك حساب بالفعل؟ ",
+
+  "forgetPasswordScreen": "نسيت كلمة المرور"
+
 }

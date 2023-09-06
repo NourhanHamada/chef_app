@@ -9,6 +9,9 @@ lightTheme(context) {
         .apply()
         .copyWith(
     ),
-    scaffoldBackgroundColor: whiteColor
+    scaffoldBackgroundColor: whiteColor,
+    appBarTheme: const AppBarTheme(
+      backgroundColor: mainColor,
+    )
   );
 }

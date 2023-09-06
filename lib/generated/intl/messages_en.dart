@@ -43,6 +43,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("E-mail must be not empty"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("Forget password?"),
+        "forgetPasswordScreen":
+            MessageLookupByLibrary.simpleMessage("Forget password"),
         "frontId": MessageLookupByLibrary.simpleMessage("Front ID"),
         "hello": MessageLookupByLibrary.simpleMessage("Hello"),
         "location": MessageLookupByLibrary.simpleMessage("Location"),

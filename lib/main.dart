@@ -1,6 +1,8 @@
 import 'package:chef_app/generated/l10n.dart';
 import 'package:chef_app/view/core/dark_theme.dart';
 import 'package:chef_app/view/core/light_theme.dart';
+import 'package:chef_app/view/screens/auth_screens/forget_password_screen.dart';
+import 'package:chef_app/view/screens/choose_lang_screen.dart';
 import 'package:chef_app/view/screens/splash_screen.dart';
 import 'package:chef_app/view_model/cubit/Login/login_cubit.dart';
 import 'package:chef_app/view_model/cubit/localization/localization_cubit.dart';
@@ -56,7 +58,7 @@ class MyApp extends StatelessWidget {
       theme: lightTheme(context),
       darkTheme: darkTheme(context),
       themeMode: themeCubit.isDark ? ThemeMode.dark : ThemeMode.light,
-      home: const SplashScreen(),
+      home: const ChooseLangScreen(),
     );
   }
 }

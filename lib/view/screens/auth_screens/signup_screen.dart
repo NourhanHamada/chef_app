@@ -368,3 +368,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
     );
   }
 }
+
+
+// todo: validator localizations!!

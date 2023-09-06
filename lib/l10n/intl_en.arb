@@ -25,5 +25,7 @@
   "frontId": "Front ID",
   "backId": "Back Id",
   "profilePic": "Profile Picture",
-  "alreadyHaveAccount": "Already have an account? "
+  "alreadyHaveAccount": "Already have an account? ",
+
+  "forgetPasswordScreen": "Forget password"
 }

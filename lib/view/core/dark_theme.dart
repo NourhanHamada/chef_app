@@ -10,5 +10,8 @@ darkTheme(context) {
         .copyWith(
     ),
     scaffoldBackgroundColor: blackColor,
+      appBarTheme: const AppBarTheme(
+        backgroundColor: mainColor,
+      ),
   );
 }

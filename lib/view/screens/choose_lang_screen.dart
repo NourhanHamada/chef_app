@@ -18,14 +18,29 @@ class ChooseLangScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Stack(
-          alignment: Alignment.center,
           children: [
-            SizedBox(
-              height: double.infinity,
-              width: double.infinity,
-              child: Image.asset(
-                background,
-                fit: BoxFit.fill,
+            // SizedBox(
+            //   height: double.infinity,
+            //   width: double.infinity,
+            //   child: Image.asset(
+            //     background,
+            //     fit: BoxFit.fill,
+            //   ),
+            // ),
+            ClipPath(
+              clipper: CustomClipperSecondContainer(),
+              child: Container(
+                width: double.infinity,
+                height: MediaQuery.sizeOf(context).height,
+                color: mainColorWithOpacity,
+              ),
+            ),
+            ClipPath(
+              clipper: CustomClipperContainer(),
+              child: Container(
+                width: double.infinity,
+                height: MediaQuery.sizeOf(context).height - 30,
+                color: mainColor,
               ),
             ),
             Column(
@@ -88,3 +103,100 @@ class ChooseLangScreen extends StatelessWidget {
     );
   }
 }
+
+class CustomClipperContainer extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    var path = Path();
+    path.lineTo(0, size.height - 200);
+    var firstStart = Offset(size.width - 200, size.height - 100);
+    var firstEnd = Offset(size.width, size.height - 150);
+    path.quadraticBezierTo(
+      firstStart.dx,
+      firstStart.dy,
+      firstEnd.dx,
+      firstEnd.dy,
+    );
+
+    var secondStart = Offset(size.width, size.height);
+    var secondEnd = Offset(size.width, size.height);
+    path.quadraticBezierTo(
+      secondStart.dx,
+      secondStart.dy,
+      secondEnd.dx,
+      secondEnd.dy,
+    );
+    path.lineTo(size.width, 0);
+    path.close();
+    return path;
+  }
+
+  @override
+  bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
+    return false;
+  }
+}
+class CustomClipperSecondContainer extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    var path = Path();
+    path.lineTo(0, size.height - 230);
+    var firstStart = Offset(size.width - 200, size.height - 100);
+    var firstEnd = Offset(size.width, size.height - 150);
+    path.quadraticBezierTo(
+      firstStart.dx,
+      firstStart.dy,
+      firstEnd.dx,
+      firstEnd.dy,
+    );
+
+    var secondStart = Offset(size.width, size.height);
+    var secondEnd = Offset(size.width, size.height);
+    path.quadraticBezierTo(
+      secondStart.dx,
+      secondStart.dy,
+      secondEnd.dx,
+      secondEnd.dy,
+    );
+    path.lineTo(size.width, 0);
+    path.close();
+    return path;
+  }
+
+  @override
+  bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
+    return false;
+  }
+}
+// class CustomClipperContainer extends CustomClipper<Path> {
+//   @override
+//   Path getClip(Size size) {
+//     var path = Path();
+//     path.lineTo(0, size.height);
+//     var firstStart = Offset(size.width, size.height);
+//     var firstEnd = Offset(size.width, size.height);
+//     path.quadraticBezierTo(
+//       firstStart.dx,
+//       firstStart.dy,
+//       firstEnd.dx,
+//       firstEnd.dy,
+//     );
+//
+//     var secondStart = Offset(size.width, size.height);
+//     var secondEnd = Offset(size.width, size.height);
+//     path.quadraticBezierTo(
+//       secondStart.dx,
+//       secondStart.dy,
+//       secondEnd.dx,
+//       secondEnd.dy,
+//     );
+//     path.lineTo(size.width, 0);
+//     path.close();
+//     return path;
+//   }
+//
+//   @override
+//   bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
+//     return false;
+//   }
+// }

@@ -43,6 +43,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "البريد الالكترني يجب ألا يكون فارغ"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+        "forgetPasswordScreen":
+            MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
         "frontId": MessageLookupByLibrary.simpleMessage("مقدمة البطاقة"),
         "hello": MessageLookupByLibrary.simpleMessage("مرحبًا"),
         "location": MessageLookupByLibrary.simpleMessage("الموقع"),
